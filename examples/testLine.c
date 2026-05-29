@@ -1,5 +1,5 @@
 #include "../turtlec.h"
-
+void tree(turtle *, float len, int level);
 int main(void){
   TurtleApp *app = turtleAppCreate(400, 200, "Test Line");
 
