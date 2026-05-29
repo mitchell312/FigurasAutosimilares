@@ -24,9 +24,9 @@ void fractaltree(Turtle* t, float len, int level){
   if(level == 0 || len < 10){
     return;
   }
-  turtleLeft(t, len);
-  fractaltree(t, len * 0.9, level - 1);
+  turtleForward(t, len);
   turtleLeft(t, 45);
   fractaltree(t, len * 0.9, level - 1);
   turtleRight(t, 90);
+  fractaltree(t, len 0*9, level - 1);
 }
