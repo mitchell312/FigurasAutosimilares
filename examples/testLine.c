@@ -1,5 +1,5 @@
 #include "../turtlec.h"
-void tree(turtle *, float len, int level);
+void fractaltree(turtle *, float, int);
 int main(void){
   TurtleApp *app = turtleAppCreate(400, 200, "Test Line");
 
@@ -19,4 +19,10 @@ int main(void){
   turtleAppRun(app);
   turtleAppDestroy(app);
   return 0;
+}
+void fractaltree(turtle* t, float len, int level){
+  if(level == 0 || len < 10){
+    turtleForward(t, len);
+    return;
+  }
 }
