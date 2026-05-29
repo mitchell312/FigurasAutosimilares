@@ -20,9 +20,12 @@ int main(void){
   turtleAppDestroy(app);
   return 0;
 }
-void fractaltree(turtle* t, float len, int level){
+void fractaltree(Turtle* t, float len, int level){
   if(level == 0 || len < 10){
     turtleForward(t, len);
     return;
   }
+  fractaltree(t, len * 0.9, level - 1);
+  turtleLeft(t, 45);
+   
 }
