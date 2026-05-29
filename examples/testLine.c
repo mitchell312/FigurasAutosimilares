@@ -22,10 +22,11 @@ int main(void){
 }
 void fractaltree(Turtle* t, float len, int level){
   if(level == 0 || len < 10){
-    turtleForward(t, len);
     return;
   }
+  turtleLeft(t, len);
   fractaltree(t, len * 0.9, level - 1);
   turtleLeft(t, 45);
-   
+  fractaltree(t, len * 0.9, level - 1);
+  turtleRight(t, 90);
 }
