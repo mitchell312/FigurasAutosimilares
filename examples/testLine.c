@@ -33,7 +33,7 @@ void fractaltree(Turtle* t, float len, int level){
   fractaltree(t, len * 0.6, level - 1);
   turtleRight(t, 45);
   fractaltree(t, len * 0.6, level - 1);
-  turtleRight(t, 90);
+  turtleRight(t, 45);
   fractaltree(t, len * 0.6, level - 1);
   turtleRight(t, 135);
   turtleForward(t, len);
