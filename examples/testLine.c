@@ -43,4 +43,6 @@ void levy(Turtle *t, float len, int level){
     turtleForward(t, len);
     return;
   }
+  turtleLeft(t, 45);
+  levy(t, len * 0.9, level - 1);
 }
