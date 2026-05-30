@@ -1,4 +1,5 @@
 #include "../turtlec.h"
+void levy(Turtle *, float, int);
 void fractaltree(Turtle *, float, int);
 int main(void){
   TurtleApp *app = turtleAppCreate(400, 200, "Test Line");
@@ -36,4 +37,10 @@ void fractaltree(Turtle* t, float len, int level){
   turtleRight(t, 135);
   turtleForward(t, len);
   turtleRight(t, 180);
+}
+void levy(Turtle *t, float len, int level){
+  if(level == 0){
+    turtleForward(t, len);
+    return;
+  }
 }
