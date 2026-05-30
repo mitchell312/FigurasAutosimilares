@@ -2,7 +2,7 @@
 void levy(Turtle *, float, int);
 void fractaltree(Turtle *, float, int);
 int main(void){
-  TurtleApp *app = turtleAppCreate(400, 400, "Test Line");
+  TurtleApp *app = turtleAppCreate(800, 400, "Test Line");
 
   if(app == NULL)
     return 1;
@@ -11,7 +11,6 @@ int main(void){
 
   turtlePenUp(t);
   turtleGoTo(t, 200.0f, 200.0f);
-  turtleLeft(t, 90);
   turtlePenDown(t);
 
   turtleSetColor(t, 255, 100, 0);
@@ -47,4 +46,5 @@ void levy(Turtle *t, float len, int level){
   levy(t, len * 0.9, level - 1);
   turtleRight(t, 90);
   levy(t, len * 0.9, level - 1);
+  turtleLeft(t, 45);
 }
