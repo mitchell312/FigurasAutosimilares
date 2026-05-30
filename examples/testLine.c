@@ -2,7 +2,7 @@
 void levy(Turtle *, float, int);
 void fractaltree(Turtle *, float, int);
 int main(void){
-  TurtleApp *app = turtleAppCreate(400, 200, "Test Line");
+  TurtleApp *app = turtleAppCreate(400, 400, "Test Line");
 
   if(app == NULL)
     return 1;
