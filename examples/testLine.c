@@ -19,7 +19,7 @@ int main(void){
   
 
   int level = 5;
-  fractaltree(t, 100, level);
+  fractaltree(t, 200, level);
 
   turtleAppRun(app);
   turtleAppDestroy(app);
@@ -30,13 +30,13 @@ void fractaltree(Turtle* t, float len, int level){
     return;
   }
   turtleForward(t, len);
-  turtleLeft(t, 45);
+  turtleLeft(t, 60);
   fractaltree(t, len * 0.5, level - 1);
-  turtleRight(t, 45);
+  turtleRight(t, 60);
   fractaltree(t, len * 0.5, level - 1);
-  turtleRight(t, 45);
+  turtleRight(t, 60);
   fractaltree(t, len * 0.5, level - 1);
-  turtleRight(t, 135);
+  turtleRight(t, 120);
   turtleForward(t, len);
   turtleRight(t, 180);
 }
