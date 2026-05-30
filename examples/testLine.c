@@ -10,14 +10,15 @@ int main(void){
   Turtle *t = turtleAppGetTurtle(app);
 
   turtlePenUp(t);
-  turtleGoTo(t, 200.0f, 200.0f);
+  turtleGoTo(t, 400.0f, 400.0f);
+  turtleLeft(t, 90);
   turtlePenDown(t);
 
   turtleSetColor(t, 255, 100, 0);
   turtleSetSpeed(t, 5.0f);
   
 
-  int level = 4;
+  int level = 5;
   fractaltree(t, 100, level);
 
   turtleAppRun(app);
@@ -30,11 +31,11 @@ void fractaltree(Turtle* t, float len, int level){
   }
   turtleForward(t, len);
   turtleLeft(t, 45);
-  fractaltree(t, len * 0.6, level - 1);
+  fractaltree(t, len * 0.5, level - 1);
   turtleRight(t, 45);
-  fractaltree(t, len * 0.6, level - 1);
+  fractaltree(t, len * 0.5, level - 1);
   turtleRight(t, 45);
-  fractaltree(t, len * 0.6, level - 1);
+  fractaltree(t, len * 0.5, level - 1);
   turtleRight(t, 135);
   turtleForward(t, len);
   turtleRight(t, 180);
