@@ -19,7 +19,7 @@ int main(void){
   
 
   int level = 3;
-  fractaltree(t, 100, level);
+  levy(t, 100, level);
 
   turtleAppRun(app);
   turtleAppDestroy(app);
@@ -44,5 +44,7 @@ void levy(Turtle *t, float len, int level){
     return;
   }
   turtleLeft(t, 45);
+  levy(t, len * 0.9, level - 1);
+  turtleRight(t, 90);
   levy(t, len * 0.9, level - 1);
 }
