@@ -29,7 +29,6 @@ void fractaltree(Turtle* t, float len, int level){
   if(level == 0 || len < 10){
     return;
   }
-  turtleSetColor(t, len, len, 0);
   turtleForward(t, len);
   turtleSetColor(t, 0, 255, 0);
   turtleLeft(t, 60);
@@ -41,6 +40,7 @@ void fractaltree(Turtle* t, float len, int level){
   turtleRight(t, 120);
   turtleForward(t, len);
   turtleRight(t, 180);
+  turtleSetColor(t, len, len, 0);
   }
 void levy(Turtle *t, float len, int level){
   if(level == 0){
