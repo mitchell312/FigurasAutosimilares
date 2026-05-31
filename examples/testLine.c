@@ -2,7 +2,7 @@
 void levy(Turtle *, float, int);
 void fractaltree(Turtle *, float, int);
 int main(void){
-  TurtleApp *app = turtleAppCreate(800, 400, "Test Line");
+  TurtleApp *app = turtleAppCreate(800, 450, "Test Line");
 
   if(app == NULL)
     return 1;
@@ -10,8 +10,7 @@ int main(void){
   Turtle *t = turtleAppGetTurtle(app);
 
   turtlePenUp(t);
-  turtleGoTo(t, 400.0f, 400.0f);
-  turtleLeft(t, 90);
+  turtleGoTo(t, 400.0f, 225.0f);
   turtlePenDown(t);
 
   turtleSetColor(t, 150, 75, 0);
@@ -19,7 +18,7 @@ int main(void){
   
 
   int level = 5;
-  fractaltree(t, 200, level);
+  levy(t, 200, level);
 
   turtleAppRun(app);
   turtleAppDestroy(app);
@@ -32,11 +31,11 @@ void fractaltree(Turtle* t, float len, int level){
   turtleForward(t, len);
   turtleSetColor(t, 0, 255, 0);
   turtleLeft(t, 60);
-  fractaltree(t, len * 0.5, level - 1);
-  turtleRight(t, 60);
   fractaltree(t, len * 0.6, level - 1);
   turtleRight(t, 60);
-  fractaltree(t, len * 0.4, level - 1);
+  fractaltree(t, len * 0.5, level - 1);
+  turtleRight(t, 60);
+  fractaltree(t, len * 0.7, level - 1);
   turtleRight(t, 120);
   turtleForward(t, len);
   turtleRight(t, 180);
@@ -48,8 +47,8 @@ void levy(Turtle *t, float len, int level){
     return;
   }
   turtleLeft(t, 45);
-  levy(t, len * 0.9, level - 1);
+  levy(t, len * 0.7, level - 1);
   turtleRight(t, 90);
-  levy(t, len * 0.9, level - 1);
+  levy(t, len * 0.7, level - 1);
   turtleLeft(t, 45);
 }
