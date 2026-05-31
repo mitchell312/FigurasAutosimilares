@@ -18,7 +18,7 @@ int main(void){
   turtleSetSpeed(t, 5.0f);
   
 
-  int level = 3;
+  int level = 5;
   fractaltree(t, 200, level);
 
   turtleAppRun(app);
